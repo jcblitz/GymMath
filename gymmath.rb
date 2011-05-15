@@ -3,9 +3,9 @@ class GymMath
   AVAILABLE_PLATES = [45, 35, 25, 10, 5, 2.5]
   EMPTY_BAR_WEIGHT = 45
 
-  def calc_plates_needed(target)
+  def calc_plates_needed(target, bar_weight = EMPTY_BAR_WEIGHT)
     plates_needed = Array.new()
-    current = EMPTY_BAR_WEIGHT
+    current = bar_weight
     current_group_of_plates = 0
   
     while (current < target)
