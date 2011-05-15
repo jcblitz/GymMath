@@ -1,0 +1,31 @@
+!!! XML
+!!!
+%html
+  %head
+    %title GymMath - Quickly and correctly figure out exactly how many weight plates you need
+  %body
+    %h1 Select bar weight and target weight
+    %p
+      Target weight can only end in either 0 or 5
+    
+    %form{ :action => "/calc", :method => "get"}
+      %p
+        %label{:for => "bar"} Bar Weight:
+        %select#bar{:name => "bar"}
+          - ['45', '35', '15'].each do |i|
+            %option{:value => i}= i
+
+      
+      %p
+        %label{:for => "target"} Target Weight:
+        %input{:type => "text", :name => "target", :class => "text", :value => "#{params[:target]}"}
+      
+      %p
+        %input{:type => "submit", :value => "Calculate", :class => "button"}
+      
+
+      %ul
+        - @plates || @plates = []
+        - @plates.each do |plate|
+          %li= plate
+    

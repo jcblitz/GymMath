@@ -1,7 +1,16 @@
 require 'sinatra'
-require 'gymmath'
+require_relative 'gymmath'
+require 'haml'
 
 get '/' do
+    haml :index
+end
 
-    erb :index
-  end
+get '/calc' do
+    bar = params[:bar]
+    target = params[:target]
+  
+    math = GymMath.new()
+    @plates = math.calc_plates_needed(target.to_i, bar.to_i)
+    haml :index
+end

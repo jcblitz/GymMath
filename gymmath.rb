@@ -7,7 +7,7 @@ class GymMath
     plates_needed = Array.new()
     current = bar_weight
     current_group_of_plates = 0
-  
+    
     while (current < target)
         if (add_plate?(target, current_group_of_plates, current))
           current += (AVAILABLE_PLATES[current_group_of_plates] * 2)
