@@ -3,3 +3,7 @@ h1. GymMath
 h2. What is this?
 
 GymMath is a plate calculator for use at the gym. Want to quickly know what plates to use to put up 290? Enter your bar weight (usually 45lbs) and a target weight, 290 in this case. 
+
+h2. THIS IS DEAD
+
+I've teamed up with a buddy and we've ported this to a native android app. The goal was for me to play with jQuery mobile while my wife was watching a show I didn't want to watch.
